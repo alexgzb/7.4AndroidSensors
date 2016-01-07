@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/textView_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Sensors"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_header"
+        android:layout_marginTop="36dp"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_magnetic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textView_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="Position"
+                android:textSize="22sp" />
+
+
+            <TextView
+                android:id="@+id/textView_magnetic_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_magnetic_header"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/textView_magnetic_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_magnetic_header"
+                android:layout_centerHorizontal="true"
+                android:layout_toEndOf="@id/textView_magnetic_value"
+                android:layout_toRightOf="@id/textView_magnetic_value"
+                android:text=" uT" />
+
+            <TextView
+                android:id="@+id/textView_magnetic_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_position"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:labelFor="@id/textView_magnetic_value"
+                android:text="Magnetic Field" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_illuminance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textView_environment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="Environment"
+                android:textSize="22sp" />
+
+
+            <TextView
+                android:id="@+id/textView_illuminance_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_illuminance_header"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/textView_illuminance_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_illuminance_header"
+                android:layout_centerHorizontal="true"
+                android:layout_toEndOf="@id/textView_illuminance_value"
+                android:layout_toRightOf="@id/textView_illuminance_value"
+                android:text=" lx" />
+
+            <TextView
+                android:id="@+id/textView_illuminance_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_environment"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:labelFor="@id/textView_illuminance_value"
+                android:text="Illuminance" />
+
+
+            <TextView
+                android:id="@+id/textView_temperature_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_temperature_header"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/textView_temperature_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_temperature_header"
+                android:layout_centerHorizontal="true"
+                android:layout_toEndOf="@id/textView_temperature_value"
+                android:layout_toRightOf="@id/textView_temperature_value"
+                android:text=" °C" />
+
+            <TextView
+                android:id="@+id/textView_temperature_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_illuminance_unit"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:labelFor="@id/textView_temperature_value"
+                android:text="Temperature" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_acc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textView_movement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="Movement"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/textView_acc_valueX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_acc_header"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/textView_acc_valueY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_acc_valueX"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/textView_acc_valueZ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_acc_valueY"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/textView_acc_unitX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_acc_header"
+                android:layout_centerHorizontal="true"
+                android:layout_toEndOf="@id/textView_acc_valueX"
+                android:layout_toRightOf="@id/textView_acc_valueX"
+                android:text=" Acc" />
+
+            <TextView
+                android:id="@+id/textView_acc_unitY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_acc_unitX"
+                android:layout_centerHorizontal="true"
+                android:layout_toEndOf="@id/textView_acc_valueY"
+                android:layout_toRightOf="@id/textView_acc_valueY"
+                android:text=" Acc" />
+
+            <TextView
+                android:id="@+id/textView_acc_unitZ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_acc_unitY"
+                android:layout_centerHorizontal="true"
+                android:layout_toEndOf="@id/textView_acc_valueZ"
+                android:layout_toRightOf="@id/textView_acc_valueZ"
+                android:text=" Acc" />
+
+            <TextView
+                android:id="@+id/textView_acc_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_movement"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:text="Accelerometer" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
